@@ -1,0 +1,14 @@
+.grid-container {
+  display: grid;
+  grid-template-columns: 250px 1fr; /* Ancho fijo para el menú */
+  height: 100vh;
+}
+
+.menu-container {
+  background-color: #f8f9fa; /* Ajusta según tu diseño */
+}
+
+.content {
+  padding: 20px;
+  overflow-y: auto; /* Para permitir el desplazamiento si el contenido es grande */
+}

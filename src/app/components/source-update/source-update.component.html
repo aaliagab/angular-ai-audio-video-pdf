@@ -1,0 +1,23 @@
+<app-logout-button></app-logout-button>
+
+<div class="grid-container">
+  <div class="menu-container">
+    <app-menu></app-menu>
+  </div>
+  <div class="content">
+    <div class="container mt-5">
+      <h2>Update Source</h2>
+      <form (ngSubmit)="updateSource()">
+        <div class="mb-3">
+          <label for="sourceName" class="form-label">Source Name</label>
+          <input type="text" id="sourceName" [(ngModel)]="source.source_name" name="source_name" class="form-control" required>
+        </div>
+        <div class="mb-3">
+          <label for="userId" class="form-label">User ID</label>
+          <input type="text" id="userId" [(ngModel)]="source.user_id" name="user_id" class="form-control" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Update</button>
+      </form>
+    </div>
+  </div>
+</div>

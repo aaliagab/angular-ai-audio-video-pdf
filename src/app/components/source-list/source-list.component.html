@@ -1,0 +1,36 @@
+<app-logout-button></app-logout-button>
+
+<div class="grid-container">
+  <div class="menu-container">
+    <app-menu></app-menu>
+  </div>
+  <div class="content">
+    <div class="container mt-5">
+      <h2>Source List</h2>
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Source ID</th>
+            <th scope="col">Source Name</th>
+            <th scope="col">User ID</th>
+            <th scope="col">Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let source of sources">
+            <td>{{ source.id }}</td>
+            <td>{{ source.source_name }}</td>
+            <td>{{ source.user_id }}</td>
+            <td>
+              <a [routerLink]="['/sources', source.id]" class="btn btn-primary btn-sm">View</a>
+              &nbsp;
+              <a [routerLink]="['/sources/update', source.id]" class="btn btn-warning btn-sm">Edit</a>
+              &nbsp;
+              <button (click)="deleteSource(source.id)" class="btn btn-danger btn-sm">Delete</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

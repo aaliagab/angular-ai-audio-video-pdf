@@ -1,0 +1,30 @@
+<app-logout-button></app-logout-button>
+<div class="grid-container">
+  <div class="menu-container">
+    <app-menu></app-menu>
+  </div>
+  <div class="content">
+    <div class="container mt-5">
+      <div>
+        <h2>Upload File</h2>
+        <form (ngSubmit)="uploadFile()" #uploadForm="ngForm">
+          <div class="mb-3">
+            <input type="file" (change)="onFileSelected($event)" accept=".pdf,audio/*,video/*" class="form-control" required>
+          </div>
+          <div class="mb-3">
+            <input type="text" placeholder="Source ID" [(ngModel)]="sourceId" name="sourceId" class="form-control" required>
+          </div>
+          <div class="mb-3">
+            <input type="text" placeholder="Access Token ID" [(ngModel)]="accesstokenId" name="accesstokenId" class="form-control" required>
+          </div>
+          <button type="submit" class="btn btn-primary">Upload</button>
+        </form>
+      </div>
+
+      <div *ngIf="response">
+        <h3>Response</h3>
+        <pre>{{ response }}</pre>
+      </div>
+    </div>
+  </div>
+</div>

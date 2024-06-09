@@ -1,0 +1,22 @@
+.vh-100 {
+    min-height: 100vh;
+  }
+  .bg-light {
+    background: url('../../../assets/background.jpg') no-repeat center center fixed;
+    background-size: cover;
+  }
+
+  .list-group-item {
+    padding: 0.5rem 1rem;
+  }
+  
+  .list-group-item .btn-link {
+    padding: 0;
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  .list-group-item .btn-link:hover {
+    text-decoration: underline;
+  }
+  

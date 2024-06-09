@@ -1,0 +1,35 @@
+<app-logout-button></app-logout-button>
+<div class="grid-container">
+  <div class="menu-container">
+    <app-menu></app-menu>
+  </div>
+  <div class="content">
+    <div class="container mt-5">
+      <h2>User List</h2>
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Username</th>
+            <th scope="col">Email</th>
+            <th scope="col">Phone</th>
+            <th scope="col">Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let user of users">
+            <td>{{ user.user_name }}</td>
+            <td>{{ user.user_email }}</td>
+            <td>{{ user.user_phone }}</td>
+            <td>
+              <a [routerLink]="['/users', user.id]" class="btn btn-primary btn-sm">View</a>
+              &nbsp;
+              <a [routerLink]="['/users/update', user.id]" class="btn btn-warning btn-sm">Edit</a>
+              &nbsp;
+              <button (click)="deleteUser(user.id)" class="btn btn-danger btn-sm">Delete</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,14 @@
+<app-menu></app-menu>
+<div>
+    <h2>Chat</h2>
+    <div class="chat-history">
+      <div *ngFor="let message of messages" [class.user-message]="message.sender === 'user'" [class.bot-message]="message.sender === 'bot'">
+        <span>{{ message.text }}</span>
+      </div>
+    </div>
+    <div class="chat-input">
+      <input type="text" [(ngModel)]="question" placeholder="Escribe tu pregunta...">
+      <button (click)="sendQuestion()">Enviar</button>
+    </div>
+  </div>
+  
