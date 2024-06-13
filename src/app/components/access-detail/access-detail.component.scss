@@ -1,0 +1,35 @@
+.grid-container {
+    display: grid;
+    grid-template-columns: 250px 1fr; /* Ancho fijo para el menú */
+    height: 100vh;
+  }
+  
+  .menu-container {
+    background-color: #f8f9fa; /* Ajusta según tu diseño */
+  }
+  
+  .content {
+    padding: 20px;
+    overflow-y: auto; /* Para permitir el desplazamiento si el contenido es grande */
+  }
+  
+  .access-detail-card {
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+  }
+  
+  .access-detail-card .row {
+    margin-bottom: 15px;
+  }
+  
+  .access-detail-card .col-md-4 {
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .access-detail-card .col-md-8 {
+    color: #555;
+  }
+  

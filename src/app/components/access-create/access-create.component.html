@@ -1,0 +1,18 @@
+<app-logout-button></app-logout-button>
+<div class="grid-container">
+  <div class="menu-container">
+    <app-menu></app-menu>
+  </div>
+  <div class="content">
+    <div class="container mt-5">
+      <h2>Create Access</h2>
+      <form (ngSubmit)="createAccess()">
+        <div class="mb-3">
+          <label for="accessName" class="form-label">Access Name</label>
+          <input type="text" id="accessName" [(ngModel)]="access.access_name" name="access_name" class="form-control" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Create</button>
+      </form>
+    </div>
+  </div>
+</div>

@@ -15,7 +15,7 @@ export class GlobalService {
     const url = `${this.apiUrl}${endpoint}?source_id=${sourceId}&accesstoken_id=${accesstokenId}`;
     const headers = new HttpHeaders({
       'Accept': 'application/json',
-      'Content-Type': 'multipart/form-data'
+      //'Content-Type': 'multipart/form-data'
     });
     return this.http.post(url, formData, { headers });
   }

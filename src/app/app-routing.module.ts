@@ -13,6 +13,10 @@ import { SourceListComponent } from './components/source-list/source-list.compon
 import { SourceCreateComponent } from './components/source-create/source-create.component';
 import { SourceDetailComponent } from './components/source-detail/source-detail.component';
 import { SourceUpdateComponent } from './components/source-update/source-update.component';
+import { AccessListComponent } from './components/access-list/access-list.component';
+import { AccessCreateComponent } from './components/access-create/access-create.component';
+import { AccessDetailComponent } from './components/access-detail/access-detail.component';
+import { AccessUpdateComponent } from './components/access-update/access-update.component';
 
 const routes: Routes = [
   { path:'', redirectTo: '/login', pathMatch: 'full' },
@@ -27,7 +31,11 @@ const routes: Routes = [
   { path:'sources', component: SourceListComponent},
   { path:'sources/create', component: SourceCreateComponent },
   { path:'sources/:id', component: SourceDetailComponent },
-  { path:'sources/update/:id', component: SourceUpdateComponent }
+  { path:'sources/update/:id', component: SourceUpdateComponent },
+  { path:'accesses', component: AccessListComponent},
+  { path:'accesses/create', component: AccessCreateComponent },
+  { path:'accesses/:id', component: AccessDetailComponent },
+  { path:'accesses/update/:id', component: AccessUpdateComponent }
 ];
 
 @NgModule({

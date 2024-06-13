@@ -7,6 +7,7 @@ import { GlobalService } from './services/global.service';
 import { AuthService } from './services/auth.service';
 import { UserService } from './services/user.service';
 import { SourceService } from './services/source.service';
+import { AccessService } from './services/access.service';
 
 import { AppComponent } from './app.component';
 import { LoginComponent } from './components/login/login.component';
@@ -24,6 +25,10 @@ import { SourceListComponent } from './components/source-list/source-list.compon
 import { SourceCreateComponent } from './components/source-create/source-create.component';
 import { SourceDetailComponent } from './components/source-detail/source-detail.component';
 import { SourceUpdateComponent } from './components/source-update/source-update.component';
+import { AccessListComponent } from './components/access-list/access-list.component';
+import { AccessCreateComponent } from './components/access-create/access-create.component';
+import { AccessDetailComponent } from './components/access-detail/access-detail.component';
+import { AccessUpdateComponent } from './components/access-update/access-update.component';
 
 
 @NgModule({
@@ -42,7 +47,11 @@ import { SourceUpdateComponent } from './components/source-update/source-update.
     SourceListComponent,
     SourceCreateComponent,
     SourceDetailComponent,
-    SourceUpdateComponent
+    SourceUpdateComponent,
+    AccessListComponent,
+    AccessCreateComponent,
+    AccessDetailComponent,
+    AccessUpdateComponent
   ],
   imports: [
     BrowserModule,
@@ -59,7 +68,8 @@ import { SourceUpdateComponent } from './components/source-update/source-update.
     GlobalService,
     AuthService,
     UserService,
-    SourceService
+    SourceService,
+    AccessService
   ],
   bootstrap: [AppComponent]
 })

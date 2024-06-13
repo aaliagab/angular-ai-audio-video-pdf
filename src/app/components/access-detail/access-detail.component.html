@@ -1,0 +1,21 @@
+<app-logout-button></app-logout-button>
+<div class="grid-container">
+  <div class="menu-container">
+    <app-menu></app-menu>
+  </div>
+  <div class="content">
+    <div class="container mt-5">
+      <h2>Access Detail</h2>
+      <div *ngIf="access" class="access-detail-card p-3 shadow rounded bg-white">
+        <div class="row mb-3">
+          <div class="col-md-4"><strong>Access Token ID:</strong></div>
+          <div class="col-md-8">{{ access.accesstoken_id }}</div>
+        </div>
+        <div class="row mb-3">
+          <div class="col-md-4"><strong>Access Name:</strong></div>
+          <div class="col-md-8">{{ access.access_name }}</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
