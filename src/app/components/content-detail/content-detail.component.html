@@ -1,0 +1,45 @@
+<app-logout-button></app-logout-button>
+<div class="grid-container">
+  <div class="menu-container">
+    <app-menu></app-menu>
+  </div>
+  <div class="content">
+    <div class="container mt-5">
+      <h2>Content Detail</h2>
+      <div *ngIf="content" class="content-detail-card p-3 shadow rounded bg-white">
+        <div class="row mb-3">
+          <div class="col-md-4"><strong>ID:</strong></div>
+          <div class="col-md-8">{{ content.id }}</div>
+        </div>
+        <div class="row mb-3">
+          <div class="col-md-4"><strong>Title:</strong></div>
+          <div class="col-md-8">{{ content.title }}</div>
+        </div>
+        <div class="row mb-3">
+          <div class="col-md-4"><strong>Phrase:</strong></div>
+          <div class="col-md-8">{{ content.phrase }}</div>
+        </div>
+        <div class="row mb-3">
+          <div class="col-md-4"><strong>Source:</strong></div>
+          <div class="col-md-8">{{ content.source_id }}</div>
+        </div>
+        <div class="row mb-3">
+          <div class="col-md-4"><strong>Access:</strong></div>
+          <div class="col-md-8">{{ content.access_id }}</div>
+        </div>
+        <div class="row mb-3">
+          <div class="col-md-4"><strong>Created At:</strong></div>
+          <div class="col-md-8">{{ content.date_add | date }}</div>
+        </div>
+        <div class="row mb-3">
+          <div class="col-md-4"><strong>Last Updated:</strong></div>
+          <div class="col-md-8">{{ content.date_upd | date }}</div>
+        </div>
+        <div class="row mb-3">
+          <div class="col-md-4"><strong>Status:</strong></div>
+          <div class="col-md-8">{{ content.status }}</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

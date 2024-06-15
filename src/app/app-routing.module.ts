@@ -17,6 +17,8 @@ import { AccessListComponent } from './components/access-list/access-list.compon
 import { AccessCreateComponent } from './components/access-create/access-create.component';
 import { AccessDetailComponent } from './components/access-detail/access-detail.component';
 import { AccessUpdateComponent } from './components/access-update/access-update.component';
+import { ContentListComponent } from './components/content-list/content-list.component';
+import {ContentDetailComponent} from './components/content-detail/content-detail.component';
 
 const routes: Routes = [
   { path:'', redirectTo: '/login', pathMatch: 'full' },
@@ -35,7 +37,9 @@ const routes: Routes = [
   { path:'accesses', component: AccessListComponent},
   { path:'accesses/create', component: AccessCreateComponent },
   { path:'accesses/:id', component: AccessDetailComponent },
-  { path:'accesses/update/:id', component: AccessUpdateComponent }
+  { path:'accesses/update/:id', component: AccessUpdateComponent },
+  { path:'contents', component: ContentListComponent},
+  { path:'contents/:id', component: ContentDetailComponent },
 ];
 
 @NgModule({

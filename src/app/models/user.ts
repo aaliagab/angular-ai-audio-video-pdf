@@ -5,8 +5,8 @@ export interface User {
   user_email: string;
   user_phone: string;
   id: string;
-  date_add: string;
-  date_upd: string;
+  date_add: Date;
+  date_upd: Date;
   sources: Source[];
   user_accesses: UserAccess[];
 }

@@ -1,0 +1,31 @@
+<app-logout-button></app-logout-button>
+<div class="grid-container">
+  <div class="menu-container">
+    <app-menu></app-menu>
+  </div>
+  <div class="content">
+    <div class="container mt-5">
+      <h2>Content List</h2>
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Title</th>
+            <th scope="col">Source</th>
+            <th scope="col">Access</th>
+            <th scope="col">Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let content of contents">
+            <td>{{ content.title }}</td>
+            <td>{{ content.source_id }}</td>
+            <td>{{ content.access_id }}</td>
+            <td>
+              <a [routerLink]="['/contents', content.id]" class="btn btn-primary btn-sm">View</a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

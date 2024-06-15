@@ -8,6 +8,7 @@ import { AuthService } from './services/auth.service';
 import { UserService } from './services/user.service';
 import { SourceService } from './services/source.service';
 import { AccessService } from './services/access.service';
+import { ContentService } from './services/content.service';
 
 import { AppComponent } from './app.component';
 import { LoginComponent } from './components/login/login.component';
@@ -29,6 +30,8 @@ import { AccessListComponent } from './components/access-list/access-list.compon
 import { AccessCreateComponent } from './components/access-create/access-create.component';
 import { AccessDetailComponent } from './components/access-detail/access-detail.component';
 import { AccessUpdateComponent } from './components/access-update/access-update.component';
+import { ContentListComponent } from './components/content-list/content-list.component';
+import { ContentDetailComponent } from './components/content-detail/content-detail.component';
 
 
 @NgModule({
@@ -51,7 +54,9 @@ import { AccessUpdateComponent } from './components/access-update/access-update.
     AccessListComponent,
     AccessCreateComponent,
     AccessDetailComponent,
-    AccessUpdateComponent
+    AccessUpdateComponent,
+    ContentListComponent,
+    ContentDetailComponent
   ],
   imports: [
     BrowserModule,
@@ -69,7 +74,8 @@ import { AccessUpdateComponent } from './components/access-update/access-update.
     AuthService,
     UserService,
     SourceService,
-    AccessService
+    AccessService,
+    ContentService
   ],
   bootstrap: [AppComponent]
 })
